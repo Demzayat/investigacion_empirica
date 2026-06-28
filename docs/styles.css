@@ -1,0 +1,100 @@
+.navbar-default {
+    background-color:#800020 ;
+    border-color: transparent;
+    padding: 15px 0 15px 0;
+}
+body{
+  color: #200953 !important;
+  text-align: justify;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+   background-color: #800020 ;
+}
+
+.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+	background-color: #800020; 
+}
+
+h3 {
+  line-height: 1.2;
+  margin-top: 1.8em;
+}
+
+.red { color: red; }
+.bordo{ color: #9E8035; }
+
+
+#-----------------------------------------------------------------------------------------------
+
+/* ── Tipografía ── */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #2c2c2c;
+  background-color: #fafaf8;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+h1.title {
+  font-size: 2.2rem;
+  margin-bottom: 0.2em;
+  border-bottom: 2px solid #800020;
+  padding-bottom: 0.3em;
+}
+
+/* ── Espaciado antes de subtítulos ── */
+h2 {
+  margin-top: 2.5em;
+  margin-bottom: 0.6em;
+  font-size: 2rem;
+  padding-left: 0.6em;
+}
+
+h3 {
+  margin-top: 2em;
+  margin-bottom: 0.4em;
+  font-size: 2rem;
+  color: #800020;
+  font-style: italic;
+}
+
+
+
+
+
+/* ── Links ── */
+a {
+  color: #800020;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #5a0015;
+}
+
+
+.red {
+  color: #cc0000;
+}
+
+
+footer {
+  margin-top: 4em;
+  padding: 1.5em 0;
+  border-top: 1px solid #white;
+  text-align: center;
+  font-size: 0.85rem;
+  background-color:#800020 ;
+    border-color: transparent;;
+}

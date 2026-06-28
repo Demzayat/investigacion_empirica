@@ -1,0 +1,280 @@
+---
+title: "Acceso a la Justicia y Litigio Constitucional"
+output: pdf_document
+---
+
+
+```{r, include=FALSE}
+library(readr)
+martes <- as.Date ("2026-03-10")
+viernes <- as.Date("2026-03-13")
+
+advdate <- function(obj, adv) {
+  Sys.setlocale("LC_TIME", "es_ES.UTF-8")
+  tmon <- obj + 7*(adv-1)
+  tmon <- format(tmon, format="%d/%m")
+  zadv <- sprintf("%02d", adv)
+  dia <- weekdays(obj)
+  tmp <- paste0("Semana ",zadv, ", ", dia,' ', tmon)
+  return(tmp)
+}
+```
+
+Profesor: Demián Zayat
+dzayat@derecho.uba.ar<br>
+Ayudante de 2da:  Tamara London
+tamaralondon@derecho.uba.ar
+
+## Programa
+
+En este curso analizaremos el derecho de acceder a la justicia, su fuente constitucional, sus garantías de funcionamiento y sus mayores problemas y dificultades para su ejercicio.
+
+Nuestro sistema jurídico presupone que cualquier persona podrá realizar una demanda ante los tribunales cuando sus derechos hayan sido afectados, vulnerados o amenazados. Este presupuesto asume que el Poder Judicial podrá entender y propender a la solución de cualquier conflicto de derechos que se le presente. Sin embargo, existen diversas razones que hacen que los tribunales de justicia y la protección judicial no sea accesible de modo igualitario para todas las personas. Algunas tendrán muchas menos dificultades para hacerlo y otras deberán vencer muchas más barreras para poder hacer llegar su reclamo a los jueces.
+
+Existen aún hoy algunas leyes y normativas que hacen que este acceso sea especialmente dificil para ciertos grupos. En esos casos, la solución podrá ser --paradójicamente-- vía un proceso constitucional.
+
+Sin embargo, también existen supuestos de grupos con mayores dificultades para hacer valer sus derechos ya no por una normativa expresa sino por una situación social, y diversas prácticas de los operadores judiciales y estatales en general. Estos casos son más dificiles de identificar, aunque inciden de un modo de mayor performatividad, siendo complicado desestabilizar la situación existente. Muchas veces puede verse que la respuesta judicial resulta patriarcal, xenófoba, racista, hegemónica, etc.
+
+En este curso haremos una revisión sobre la normativa constitucional involucrada en el derecho de acceso a la justicia, tomaremos nota de las garantías procesales que establece la constitución para su eficacia, y analizaremos de modo crítico y con casos concretos cómo y por qué existen grupos identitarios de población que suele tener mayores dificulades de acceso a los tribunales.
+
+## Objetivo
+
+El objetivo del curso es visibilizar, discutir y analizar de modo crítico las diversas barreras que afectan al acceso a la justicia, sus aspectos centrales, y su dimensión estructural. La idea es poder analizar problemas jurídicos desde el punto de vista del acceso a la justicia y decidir estrategias para superarlas.
+
+## Metodología
+
+Será un curso con un componente teorico sobre el derecho de acceso a la justicia y sus garantías de funcionamiento, y práctico en el análisis de la situación de los problemas que los grupos identitarios tienen en particular. Este aspecto práctico partirá del análisis de diversas investigaciones empíricas sobre cuáles son estas dificultades, y la discusión sobre cómo fue resuelta tanto por los tribunales locales como regionales o internacionales.
+
+Se espera que les estudiantes puedan leer la bibliografía indicada de modo previo a cada clase, y que los encuentros funcionen  no para repetir sino para debatir sobre la literatura indicada.
+
+Habrá un único examen presencial al final de la cursada.
+
+## Cronograma y bibliografía
+
+### `r advdate(viernes, 1)`. Unidad 1. Presentación
+
+Presentación de los objetivos y metodología del curso. Introducción al derecho de acceso a la justicia. Dimensión instrumental y dimensión sustantiva del derecho. Movimiento de Acceso a la Justicia. Reconocimiento constitucional.
+
+-   Maurino, Gustavo y Sucunza Matías, "Acceso a la Justicia", en Gargarella- Guidi *Comentarios de la Constitución de la Nación Argentina*, tomo 2, pp 895-929, puntos 1 y 2, [aca](https://drive.google.com/file/d/1On39ejMciqQNjJIpz1fPseKak_KCjuuF/view?usp=sharing)
+
+
+
+### `r advdate(martes, 2)` Unidad 1. Estándares internacionales 
+
+
+-   Maurino, Gustavo y Sucunza Matías, "Acceso a la Justicia", en Gargarella- Guidi *Comentarios de la Constitución de la Nación Argentina*, tomo 2, pp 895-929, puntos 3 y 4, [aca](https://drive.google.com/file/d/1On39ejMciqQNjJIpz1fPseKak_KCjuuF/view?usp=sharing).
+
+-   Reglas de Brasilia sobre Acceso a la Justicia de las Personas con vulnerabilidad con la actualización de 2018, [en este link](https://brasilia100r.com/wp-content/uploads/2020/07/Reglas-de-Brasilia-actualizaci%C3%B3n-2018.pdf)
+
+<!-- - Borrador de Convenio Iberoamericano sobre Acceso a la Justicia [aca](https://drive.google.com/file/d/1ZvhBoVmS245Mt4_mxBN_GJOdlh1jDEL5/view?usp=sharing) -->
+
+
+
+### `r advdate(viernes, 2)` Unidad 2. Concepto clásico y estructural
+
+
+Patrocinio letrado. Requerir un patrocinio letrado puede ser difícil en muchos casos. ¿Es una garantía útil? Ahora, son todes les abogades iguales? Por qué tener dinero es relevante para el sistema judicial? Concepciones clásica y estructural del acceso a la justicia.
+
+-   Gallanter, "Por qué los poseedores salen adelante?, [link](https://drive.google.com/file/d/1Fj3STLmXxHrJglgGgs5JUtDjXy0DSJ3o/view?usp=sharing)
+
+- Bohmer, "Igualadores Retóricos", [aca](https://drive.google.com/file/d/0B50ljTnhr79kMWQ2OTgzYzMtNGNiNS00YjQxLThjYjYtYzg2YWYyNzc0MTlh/view?usp=sharing&resourcekey=0-QzTl1yGSNgnHMOI_ICHjEg)
+
+
+
+### [`r advdate(martes, 3)`  Feriado 24 de marzo. Día de la Memoria, por la verdad y la justicia]{.bordo}
+
+### `r advdate(viernes, 3)`. Unidad 3. La Agenda estructural - Víctimas
+
+
+-   CELS, "El acceso a la justicia como una cuestión de derechos humanos", en Informe Anual 2016, [acá](https://drive.google.com/file/d/1qH6DsnHctmesy6nje2f5NgCyowQ0PkyM/view?usp=sharing) El acceso a la justicia como una cuestión de derechos humanos
+
+-   Piqué, María, "Los derechos de las víctimas de delitos en nuestra Constitución", disponible [aca](https://drive.google.com/file/d/1NaUqgIjcAosZx6OCPuJzcdG3sbKrqfaC/view?usp=sharing)
+
+- Ley de víctimas [aca](https://servicios.infoleg.gob.ar/infolegInternet/anexos/275000-279999/276819/norma.htm)
+
+- Declaración de Karina Gimenez, a partir del minuto 28 hasta el minuto 35.
+
+<iframe src="https://drive.google.com/file/d/1ARawcLLXQ_35LuElRaTyZGEHzDAWGr3t/preview" width="560" height="315" allow="autoplay"></iframe>
+
+
+### `r advdate(martes, 4)`. Unidad 3. La práctica - Migrantes
+
+En esta unidad comenzaremos a ver cómo son afectados algunos grupos en particular.
+
+a.  Migrantes Expulsiones. Caso Vanessa Gomez
+
+-   Expediente judicial CAF 067668/2018 [retencion](https://drive.google.com/file/d/1MszNbvuQgl56ukSCbql4ggAAKyiia5Bs/view?usp=sharing), [captura](https://drive.google.com/file/d/11RSJ0lXuMKwhQy-gVHfODbc-AH1fBE0j/view?usp=sharing) y [apelacion](https://drive.google.com/file/d/1xsXyT2y3F7sGL8yhK8kG6GTfhkYi7nVw/view?usp=sharing)
+
+-   Oteiza y Zayat, A treinta años de la CDN, [aca](https://drive.google.com/file/d/1rZbIfh3834THG1K07moFq1Cgp_zmYtsk/view?usp=sharing)
+
+- CSJN Fallo "Barrios Rojas" [aca](https://drive.google.com/file/d/15DQUBVIVb6feRRGwkksVgjZT9qRLTdOL/view?usp=sharing)
+
+- CSJN, Fallo "Zuluaga Celemin" del 13/10/2022 [aca](https://drive.google.com/file/d/1B0sp1vdW7HV6fYlQxB1nLoCG4GXRYcR8/view?usp=sharing)
+
+- CSJN Fallo "Chiemena Uhiara" [aca](https://drive.google.com/file/d/1m4EdxUp68KgqEPfTHjRH59QR_IDpFAk5/view?usp=sharing)
+
+- CSJN, Fallo "Ramírez Balbuena" [aca](https://drive.google.com/file/d/1Ywkky3GM7QkgfrJzKadus-wxZKdKI1aj/view?usp=sharing) (agregado recién) 
+
+- DNU 366/2025 [aca](https://servicios.infoleg.gob.ar/infolegInternet/anexos/410000-414999/413297/norma.htm) 
+
+<!-- - DNU 942/2024, art. 4 [aca](https://servicios.infoleg.gob.ar/infolegInternet/anexos/405000-409999/405520/norma.htm) -->
+
+<iframe src="https://drive.google.com/file/d/1HsNG-QDJsp31jH11RkpUEMXX27kHTJl0/preview" width="560" height="315" allow="autoplay"></iframe>
+
+
+
+### [`r advdate(viernes, 4)`.  Feriado - Viernes Santo]{.bordo}
+
+
+### `r advdate(martes, 5)`. Unidad 3. La práctica - Situación de Calle
+
+b.  Usurpaciones y derecho de defensa
+
+-   Ricciardi y Zayat, *El derecho de defensa en los casos de usurpaciones en la Ciudad de Buenos Aires: un estudio empírico*, en Revista Institucional de la Defensa Pública de la CABA N° 1, disponible [acá](https://drive.google.com/file/d/1KeqFSqkZ2aBrHXkRcIaZCVu6AMSaX7zH/view?usp=sharing)
+
+<!-- - Protocolo de Salud Mental, [aca](https://drive.google.com/file/d/1_1DCvbeTGT8gLp9pAMsCejJeJPs-2mj2/view?usp=sharing) -->
+
+- Ley 6020: "_Art. 335 CPP CABA: En los casos de usurpación de inmuebles, en cualquier estado del proceso, el/la Fiscal o el/la Juez/a, a pedido del/la damnificado/a y sin correr traslado a la defensa, puede disponer provisionalmente el inmediato reintegro de la posesión o tenencia del inmueble, cuando el derecho invocado fuere verosímil y puede fijar una caución si lo considerare necesario. A tales fines, el/la Juez/a escucha en entrevista personal a la Fiscalía. La decisión que disponga la resolución se ejecuta y es apelable sin efecto suspensivo_. (Ley 6020, del 04/10/2018)"
+
+### `r advdate(viernes, 5)`. Unidad 3. La práctica- Discapacidad
+
+c.  Personas con discapacidad
+
+-   Corte IDH, caso "Furlan y familiares c. Argentina", disponible [aca](https://www.corteidh.or.cr/docs/casos/articulos/seriec_246_esp.pdf), y un resumen oficial [aca](https://www.corteidh.or.cr/docs/casos/articulos/resumen_246_esp.pdf)
+
+- CSJN, "Asociación Francesa de Beneficencia" [aca](https://drive.google.com/file/d/1hVROXu_IFbswD_0UtcBpXPZ0gEbTIiQJ/view?usp=share_link)
+
+- (opcional) CSJN, "Institutos Médicos Antártida s/ quiebra s/ inc. de verificación (R.A.F. y L.R.H. de F)" [aca](https://drive.google.com/file/d/1THtTAOVsLhI8y5mQq5mNTLrt-LFdFc-K/view?usp=sharing)
+
+- CSJN, Ejecuciones contra el Estado [aca](https://drive.google.com/file/d/1X2oK8aGhqhadJ7YkQCHktaT49Ypk5udZ/view?usp=share_link)
+
+
+### `r advdate(martes, 6)`. Unidad 3. La práctica - Salud Mental - Niñeces
+
+
+d. Salud mental
+
+- CSJN, "R. M.J s/Insania", [aca](https://drive.google.com/file/d/1c29zw3cQDmwNGuO-GDR15KUq7Xc-UZJb/view?usp=sharing)
+
+
+
+### `r advdate(viernes, 6)`. Unidad 3. La práctica - LGBTIQ
+
+e. Niñeces
+
+  - MPT CABA, [Violencia contra Niños, Niñas y Adolescentes](https://drive.google.com/file/d/1lc3H955K8Wx1-7mdtDAJX--CBBcqXfuX/view?usp=sharing) (solo **Capítulos 1 y 2**)
+
+  - Opcional, Fallo Camara Apelaciones Penal Juvenil CABA, 6/4/2025, [aca](https://drive.google.com/file/d/1aXssgEyYJ8y3i_Vc8h3LngVQcR3PCvnb/view?usp=sharing)
+
+d.  LGBT Trans
+
+-   Informe sombra CEDAW 2026, [aca](https://drive.google.com/file/d/1-MXugF9SyQNYE-aD3kk4VbEC-W0ZqdvX/view?usp=sharing)
+
+<!-- -   Violencia institucional contra personas trans, [ponencia](https://drive.google.com/file/d/1NWDuVTHVpSSWbHTuvP6WPAy6waXvDyXo/view) -->
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FI_aw0aFbeo?si=VVXl8e0I0X8_X4m5&amp;controls=0&amp;start=81" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+### `r advdate(martes, 7)`. Unidad 3. La práctica
+[El martes terminamos con LGBTTIQ:  el fallo de Vicky Hernandez, vemos el caso de Luz Aime, y el texto de María Piqué de la garantía de imparcialidad,  la recusación de Luz Aime y el alegato de cierre]{.red}
+
+- Caso Corte IDH, Vicky Hernandez c/ Honduras [sentencia](https://www.corteidh.or.cr/docs/casos/articulos/seriec_422_esp.pdf) y [resumen](https://www.corteidh.or.cr/docs/casos/articulos/resumen_422_esp.pdf) y [video](https://www.youtube.com/watch?v=5AXht8vR6l8) a partir del minuto 40.
+
+- Caso de Luz Aime, [aca](https://www.cosecharoja.org/absolucion-para-luz-le-quieren-dar-perpetua-por-trans-y-pobre/)
+
+<iframe src="https://drive.google.com/file/d/10sNUdx9RvOP_lPg7TqSARLt-t0268FTV/preview" width="560" height="320" allow="autoplay"></iframe>
+
+Unidad 3. La práctica - Mujeres
+
+e.  Mujeres
+
+- Pique y Fernandez Valle, "La garantía de imparcialidad judicial desde la perspectiva de género"  [aca](https://drive.google.com/file/d/1atsNG8fNfxcBruDPtPve0N3AmUf6OA3h/view?usp=sharing)
+
+- Recusación Luz Aime [aca](https://drive.google.com/file/d/1ZWe1xva3x_Y0ttVg2CZ4eliKBj-8bbBy/preview)
+
+
+- Alegato de cierre Ministerio Público Fiscal [Luz Aime](https://youtu.be/ZKH82JYVLgc)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZKH82JYVLgc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+### `r advdate(viernes, 7)`. Unidad 3. La práctica - Mujeres
+
+e. Mujeres (cont)
+
+- CSJN, Fallo Rizzi, 16/05/2024 [aca](https://drive.google.com/file/d/1W6zEuSV0_wshgD8vEc_1HMRiGjlUa-qS/view?usp=sharing)
+
+-   Inecip, casos de violencia de género, [aca](https://inecip.org/publicaciones/herramientas-jurisprudenciales-para-el-litigio-con-perspectiva-de-genero/). Leer la introducción y las fichas 1, 2, 3, 5 y 6.
+
+-   CEDAW, Observación General 33, disponible [acá](https://drive.google.com/file/d/1j3suY4Q3JhS5EzbAvs6_K6XSbQsOQ7D7/view?usp=sharing)
+
+- Ley de Protección integral conta la Mujer [aca](http://servicios.infoleg.gob.ar/infolegInternet/anexos/150000-154999/152155/texact.htm) 
+
+
+- CEDAW, comunicacion 88/2015 - Sra X c. Timor Lester [aca](https://drive.google.com/file/d/1eyLvEJwr0kHy8xZMDpxbthoBAkPDBps0/view?usp=sharing)
+
+Dejo por aca el video de [Rita Segato](https://youtu.be/prUqWHKnUd4)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/prUqWHKnUd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+ 
+
+
+### `r advdate(martes, 8)`. Unidad 3. La práctica - Pueblos originarios
+
+<!-- e. Afrodescendientes y africanos -->
+
+<!-- -   Angela Davis, "Raza, Mujeres y clase", Violación, racismo y el mito del violador negro, [capítulo 11](https://drive.google.com/file/d/1ghSHi12WUBBQlkcBQYiA5--Z_rGMnndc/view?usp=sharing) (o aca el [libro entero](https://drive.google.com/file/d/1dKW89DDQlKGgsKIE74Mi7i6pnmdTvDxn/view?usp=sharing)) -->
+
+
+<!-- -   Grupo de Trabajo sobre Afrodescendientes, visita a [Argentina](http://daccess-ods.un.org/access.nsf/Get?Open&DS=A/HRC/42/59/Add.2&Lang=S) -->
+
+f.  Pueblos originarios
+
+- Comite DH, NFL, [aca](https://drive.google.com/file/d/1CP_TpEaI6XXZIb3ACuyqa8XFPuvbdR3f/view?usp=sharing)
+
+- CSJN, Fallo Coronel, Gustavo Javier, [aca](https://drive.google.com/file/d/1kslBUCofBjqzYSqUjl-dV5q7sZo_unnV/view?usp=sharing)
+
+- Inadi, Dictamen Colihueque, [aca](https://drive.google.com/file/d/1_t9jnOgqHc9qw7PyU6nuJS0_VORXtdLj/view?usp=sharing¨)
+
+- Video sentencia colihueque
+
+<iframe src="https://drive.google.com/file/d/1l0JvN4Kem5L9y8e-wwhxmfGpSnU4p72g/preview" width="640" height="480" allow="autoplay"></iframe>
+
+
+### [`r advdate(viernes, 8)`. Feriado - Dia del Trabajador/a]{.bordo} 
+
+
+### `r advdate(martes, 9)` . Unidad 4. Litigio Constitucional
+
+
+
+Estándares de la Corte Suprema para facilitar el acceso a la justicia: 
+
+- CSJN [Halabi](https://drive.google.com/file/d/1EcDi8VnbuUNH7DlaRPhTMit0IGLLGn0d/view?usp=sharing)
+
+- CSJN [Padec](https://drive.google.com/file/d/186eN_fSToqx4d_W2fRI2pckZA3a5CWCH/view?usp=sharing)
+
+- Amparo colectivo [DADSE](https://drive.google.com/file/d/1JKvY_Tlo8fV1MUStzKk_WLW_QkCFG1LG/view?usp=sharing)
+
+otros ejemplos
+
+- CNCAF, Sala V, [CELS y OTROS s/DNU 70-17](https://drive.google.com/file/d/1j4N1FxaCWPwVycMh9KS32oLPEqx-vAac/view?usp=sharing)
+
+- CSJN, [Quisbert Castro](https://drive.google.com/file/d/1kepRDLt6tK6OjOfKD_d4vBkkivAKNYHk/view?usp=sharing)
+
+
+### `r advdate(viernes, 9)`. Examen final presencial
+
+<!-- - caso de Violencia obstetrica de la CEDAW, [aca](https://drive.google.com/file/d/1YqDi5n11KCJaBfwa4WpQvsGFt-UqEv-a/view?usp=sharing) -->
+
+
+
+---
+
+<footer>
+[📧 Suscribirse a la lista de difusión del curso](https://groups.google.com/g/accesojusticia/members){.btn .btn-default}
+</footer>
+
