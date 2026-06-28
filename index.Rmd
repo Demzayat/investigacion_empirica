@@ -56,9 +56,8 @@ En una última etapa, juntaremos ambos saberes — la parte teórica sobre la to
 
 ## Cronograma y bibliografía
 
-### Unidad 1. Introducción a las políticas basadas en evidencia
 
-### `r advdate(clase1, 1)`. Clase 1. Introducción a la metodología cuantitativa
+### Clase 1. 2 de Julio.  Introducción a la metodología cuantitativa
 
 Introducción a la metodología cuantitativa. Diferencias con investigaciones cualitativas. El Censo Nacional. Caso de Personas LGBT.
 
@@ -68,9 +67,9 @@ Introducción a la metodología cuantitativa. Diferencias con investigaciones cu
 
 - Pregunta sobre identidad de género en el CENSO 2022.
 
-### [`r advdate(clase1, 2)`. Feriado — 9 de Julio. Día de la Independencia. Recuperamos como clase asincrónica]{.bordo}
+### Feriado — 9 de Julio. Día de la Independencia. Recuperamos como clase asincrónica]
 
-### `r advdate(clase1, 3)`. Clase 2. Introducción a la ciencia de datos
+### Clase 2. 16 de Julio.  Introducción a la ciencia de datos
 
 - Sosa Escudero, *Big Data*, Cap. 1 "Perdidos en el Océano de datos" y Cap. "Gran Hermano".
 
@@ -84,33 +83,31 @@ La evaluación de impacto.
 
 - Banco Mundial y BID, *La evaluación de impacto en la práctica*, 2016, disponible en español en [https://www.worldbank.org/en/programs/sief-trust-fund/publication/impact-evaluation-in-practice](https://www.worldbank.org/en/programs/sief-trust-fund/publication/impact-evaluation-in-practice). Capítulo 1.
 
-### `r advdate(clase1, 6)`. Clase 4. Performance Stats
+### Clase 4. 6 de Agosto. Performance Stats
 
 - Robert Behn, *The PerformanceStat Potential*, Capítulos 1, 2 y 3.
 
 - Cathy O'Neil, *Weapons of Math Destruction*, Capítulo 5.
 
-### Unidad 2. Herramientas de Ciencia de Datos
 
-### `r advdate(clase1, 7)`. Clase 5. Ciencia de Datos — Las funciones básicas
+### Clase 5. 13 de Agosto. Ciencia de Datos — Las funciones básicas
 
 - Vazquez Brust y Zayat, *Ciencia de Datos para el Activismo Jurídico*, [https://cdaj.netlify.app/](https://cdaj.netlify.app/), cap. 1, 2, 3 y 4.
 
-### `r advdate(clase1, 8)`. Clase 6. Ciencia de Datos — Introducción a la Estadística
+### Clase 6. 20 de Agosto. Ciencia de Datos — Introducción a la Estadística
 
 - Vazquez Brust y Zayat, *Ciencia de Datos para el Activismo Jurídico*, [https://cdaj.netlify.app/](https://cdaj.netlify.app/), cap. 5 y 7.
 
 - Birger Madsen, *Statistics for non-statisticians*, capítulo 3: "Descripción de los datos", disponible [acá](https://ndl.ethernet.edu.et/bitstream/123456789/38750/1/Birger%20Stjernholm%20Madsen_.pdf).
 
-### `r advdate(clase1, 9)`. Clase 7. EPH — Paquete EPH — Brecha de género
+### Clase 7. 27 de Agosto. EPH — Paquete EPH — Brecha de género
 
 - Ecofeminita, "La desigualdad de género se puede medir", disponible en [https://ecofeminita.com/la-desigualdad-de-genero-se-puede-medir/](https://ecofeminita.com/la-desigualdad-de-genero-se-puede-medir/).
 
 - Dirección de Economía, Igualdad y Género, "Las brechas de género en la economía argentina", 2022.
 
-### Unidad 3. Evaluación de impacto — El caso IFE
 
-### `r advdate(clase1, 10)`. Clase 8. Planificando la IFE
+### Clase 8. 3 de Septiembre. Planificando la IFE
 
 - Decreto 310/2020.
 
@@ -122,8 +119,4 @@ La evaluación de impacto.
 
 - Análisis de datos de Covid.
 
----
 
-<footer>
-[📧 Contacto](mailto:dzayat@derecho.uba.ar){.btn .btn-default}
-</footer>
