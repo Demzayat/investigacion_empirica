@@ -61,21 +61,21 @@ En una última etapa, juntaremos ambos saberes — la parte teórica sobre la to
 
 Introducción a la metodología cuantitativa. Diferencias con investigaciones cualitativas. El Censo Nacional. Caso de Personas LGBT.
 
-- Becket, *Datos, Pruebas e Ideas*, capítulos 2 y 3: "Ideas, Opiniones y Pruebas" y "Cómo lo hacen los naturalistas", pp. 63 a 100.
+- Becket, [Datos, Pruebas e Ideas](https://drive.google.com/file/d/1qxKSvAcz6RUcT0K9W35X9mB77Nv2Zbzh/view?usp=sharing), capítulos 2 y 3: "Ideas, Opiniones y Pruebas" y "Cómo lo hacen los naturalistas", pp. 63 a 100.
 
-- Becket, "Censos", pp. 110 a 150.
+- Becket, "Censos", pp. 110 a 150. Mismo [link](https://drive.google.com/file/d/1qxKSvAcz6RUcT0K9W35X9mB77Nv2Zbzh/view?usp=sharing)
 
 - Pregunta sobre identidad de género en el CENSO 2022.
 
-### Feriado — 9 de Julio. Día de la Independencia. Recuperamos como clase asincrónica]
+### Feriado — 9 de Julio. Día de la Independencia. [Recuperamos como clase asincrónica]
 
 ### Clase 2. 16 de Julio.  Introducción a la ciencia de datos
 
 - Sosa Escudero, *Big Data*, Cap. 1 "Perdidos en el Océano de datos" y Cap. "Gran Hermano".
 
-- Fundar, "Datos y Algoritmos para el desarrollo", mayo 2021.
+- Fundar, [Datos y Algoritmos para el desarrollo](https://drive.google.com/file/d/1r57K2u2w0FkQ71L_UrKM_YxNLLoW_xa5/view?usp=sharing), mayo 2021.
 
-- Virginia Eubanks, *Automating Inequality*, 2017, Smartins, cap. Introduction, Capítulo 2.
+- Virginia Eubanks, [Automating Inequality](https://drive.google.com/file/d/1BBtL6Ze7NFvnFJ8fh8gcxFXqj7zm2AxA/view?usp=sharing), 2017, Smartins, cap. Introduction, Capítulo 2.
 
 ### Clase 3. Asincrónica (para ver durante las vacaciones)
 
@@ -85,7 +85,7 @@ La evaluación de impacto.
 
 ### Clase 4. 6 de Agosto. Performance Stats
 
-- Robert Behn, *The PerformanceStat Potential*, Capítulos 1, 2 y 3.
+- Robert Behn, [The PerformanceStat Potential](https://drive.google.com/file/d/1ZCK6iXxpFTUZh3X8JFpdhJ1vr4bMytTq/view?usp=sharing), Capítulos 1, 2 y 3.
 
 - Cathy O'Neil, *Weapons of Math Destruction*, Capítulo 5.
 
@@ -98,11 +98,11 @@ La evaluación de impacto.
 
 - Vazquez Brust y Zayat, *Ciencia de Datos para el Activismo Jurídico*, [https://cdaj.netlify.app/](https://cdaj.netlify.app/), cap. 5 y 7.
 
-- Birger Madsen, *Statistics for non-statisticians*, capítulo 3: "Descripción de los datos", disponible [acá](https://ndl.ethernet.edu.et/bitstream/123456789/38750/1/Birger%20Stjernholm%20Madsen_.pdf).
+- Birger Madsen, [Statistics for non-statisticians](https://ndl.ethernet.edu.et/bitstream/123456789/38750/1/Birger%20Stjernholm%20Madsen_.pdf), capítulo 3: "Descripción de los datos".
 
 ### Clase 7. 27 de Agosto. EPH — Paquete EPH — Brecha de género
 
-- Ecofeminita, "La desigualdad de género se puede medir", disponible en [https://ecofeminita.com/la-desigualdad-de-genero-se-puede-medir/](https://ecofeminita.com/la-desigualdad-de-genero-se-puede-medir/).
+- Ecofeminita, [La desigualdad de género se puede medir](https://ecofeminita.com/la-desigualdad-de-genero-se-puede-medir/).
 
 - Dirección de Economía, Igualdad y Género, "Las brechas de género en la economía argentina", 2022.
 
