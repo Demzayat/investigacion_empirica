@@ -82,7 +82,7 @@ La evaluación de impacto.
 
 - Vazquez Brust y Zayat, *Ciencia de Datos para el Activismo Jurídico*, [https://cdaj.netlify.app/](https://cdaj.netlify.app/), cap. 5 y 7.
 
-- Birger Madsen, [Statistics for non-statisticians](https://ndl.ethernet.edu.et/bitstream/123456789/38750/1/Birger%20Stjernholm%20Madsen_.pdf), capítulo 3: "Descripción de los datos".
+- Birger Madsen, [Statistics for non-statisticians](https://drive.google.com/file/d/1g87NNdsQ2DKywKzMYNZlBQZzu6Yuv392/view?usp=sharing), capítulo 3: "Descripción de los datos".
 
 ### Clase 7. 27 de Agosto. EPH — Paquete EPH — Brecha de género
 
