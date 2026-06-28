@@ -50,7 +50,7 @@ Al mismo tiempo, se espera que las y los alumnos cuenten con nociones básicas d
 
 En el curso se brindarán herramientas teóricas, y luego las utilizaremos de modo práctico. Para ello, además de las lecturas de la teoría, utilizaremos software para la ciencia de datos y aprenderemos a utilizarlo. Comenzamos con una introducción a la ciencia de datos, utilizando ejemplos jurídicos sencillos para familiarizarnos con la herramienta.
 
-Se espera que antes del comienzo del curso las y los estudiantes hayan instalado en sus computadoras el software de fuente abierta R ([https://cran.r-project.org/](https://cran.r-project.org/)), el entorno RStudio para utilizarlo ([https://posit.co/products/open-source/rstudio/](https://posit.co/products/open-source/rstudio/)), y utilizaremos un manual para utilizarlo ([https://cdaj.netlify.app/](https://cdaj.netlify.app/)). Pueden conseguir un tutorial para la instalación [aquí](https://demzayat.github.io/derecho_y_datos/instalacion.html).
+<u>**Se espera que antes del comienzo del curso las y los estudiantes hayan instalado en sus computadoras el software de fuente abierta R ([https://cran.r-project.org/](https://cran.r-project.org/)), el entorno RStudio para utilizarlo ([https://posit.co/products/open-source/rstudio/](https://posit.co/products/open-source/rstudio/)), y utilizaremos un manual para utilizarlo ([https://cdaj.netlify.app/](https://cdaj.netlify.app/)). Pueden conseguir un tutorial para la instalación [aquí](https://demzayat.github.io/derecho_y_datos/instalacion.html).**</u>
 
 En una última etapa, juntaremos ambos saberes — la parte teórica sobre la toma de decisiones basadas en evidencia y la utilización de la Ciencia de Datos — para evaluar por nuestra cuenta el impacto del programa IFE implementado durante el 2020 en Argentina.
 
@@ -81,13 +81,13 @@ Introducción a la metodología cuantitativa. Diferencias con investigaciones cu
 
 La evaluación de impacto.
 
-- Banco Mundial y BID, *La evaluación de impacto en la práctica*, 2016, disponible en español en [https://www.worldbank.org/en/programs/sief-trust-fund/publication/impact-evaluation-in-practice](https://www.worldbank.org/en/programs/sief-trust-fund/publication/impact-evaluation-in-practice). Capítulo 1.
+- Banco Mundial y BID, [La evaluación de impacto en la práctica](https://drive.google.com/file/d/1njlFh8NjIVg8lChQcQGoL18JQtGMtRHs/view?usp=sharing), 2016, Capítulo 1.
 
 ### Clase 4. 6 de Agosto. Performance Stats
 
 - Robert Behn, [The PerformanceStat Potential](https://drive.google.com/file/d/1ZCK6iXxpFTUZh3X8JFpdhJ1vr4bMytTq/view?usp=sharing), Capítulos 1, 2 y 3.
 
-- Cathy O'Neil, *Weapons of Math Destruction*, Capítulo 5.
+- Cathy O'Neil, [Weapons of Math Destruction](https://drive.google.com/file/d/10O843_2b8mwYTvTMkqbeOS504tGyaDkG/view?usp=sharing), Capítulo 5.
 
 
 ### Clase 5. 13 de Agosto. Ciencia de Datos — Las funciones básicas
@@ -104,16 +104,16 @@ La evaluación de impacto.
 
 - Ecofeminita, [La desigualdad de género se puede medir](https://ecofeminita.com/la-desigualdad-de-genero-se-puede-medir/).
 
-- Dirección de Economía, Igualdad y Género, "Las brechas de género en la economía argentina", 2022.
+- Dirección de Economía, Igualdad y Género, [Las brechas de género en la economía argentina](https://drive.google.com/file/d/1UhrEUJF_S8pYMfW5P44nqr8uIUKEqFg_/view?usp=sharing), 2022.
 
 
 ### Clase 8. 3 de Septiembre. Planificando la IFE
 
-- Decreto 310/2020.
+- [Decreto 310/2020](https://servicios.infoleg.gob.ar/infolegInternet/verNorma.do;jsessionid=F5FE38BBBF923D9755A478A64070400C?id=335820)
 
-- Mercedes D'Alessandro, "Ingreso Familiar de Emergencia. Una política pública contrareloj", Fundar, 2022.
+- Mercedes D'Alessandro, [Ingreso Familiar de Emergencia. Una política pública contrareloj](https://drive.google.com/file/d/1-HrHTgrDJ90c3ISGAEEzhgV5QHUEnyw6/view?usp=sharing)", Fundar, 2022.
 
-- Dictamen INADI sobre IFE y Migrantes.
+- Dictamen INADI sobre [IFE y Migrantes](https://drive.google.com/file/d/1AxCQuTcREFeDa2fIyPhEdhp1QiNG6mOP/view?usp=sharing).
 
 ### Clase 9. Asincrónica — Evaluación de impacto del IFE
 
