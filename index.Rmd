@@ -3,22 +3,6 @@ title: "Investigación empírica y cuantitativa para la gestión pública"
 output: html_document
 ---
 
-
-```{r, include=FALSE}
-library(readr)
-clase1 <- as.Date("2026-07-02")
-
-advdate <- function(obj, adv) {
-  Sys.setlocale("LC_TIME", "es_ES.UTF-8")
-  tmon <- obj + 7*(adv-1)
-  tmon <- format(tmon, format="%d/%m")
-  zadv <- sprintf("%02d", adv)
-  dia <- weekdays(obj)
-  tmp <- paste0("Clase ", zadv, ", ", dia, " ", tmon)
-  return(tmp)
-}
-```
-
 Facultad de Derecho - UBA\
 Maestría en Derecho y Gobierno\
 2do bimestre 2026
