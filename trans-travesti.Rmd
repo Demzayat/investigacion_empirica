@@ -1,0 +1,110 @@
+---
+title: "Identidad de género en el Censo 2022"
+date: "2026-07-01"
+documentclass: extarticle
+output: pdf_document
+header-includes:
+  - \usepackage{tgheros}
+  - \renewcommand{\familydefault}{\sfdefault}
+  - \usepackage[margin=3cm]{geometry}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+knitr::knit_hooks$set(inline = function(x) {
+  if (is.numeric(x)) {
+    format(x, big.mark = ".", decimal.mark = ",", scientific = FALSE)
+  } else {
+    x
+  }
+})
+```
+En este ejercicio vamos a averiguar cuantas personas trans/travesti viven en la Argentina, de acuerdo al Censo 2022. Para ello, primero vamos a cargar las bases del Redatam del CENSO 2024.
+
+Estas bases estuvieron disponibles para el paquete RedatamX hasta el 4 de mayo de 2026, muy poquito. Ahora es un poco más dificil conseguirlas online, pero por eso vamos a usar las que ya había descargado, que las subí a una carpeta del google drive. Habrá que descargar la carpeta del siguiente link [https://drive.google.com/drive/folders/17E6uIojZfb6mDiVap-ALPhdPtKCJTgAI?usp=sharing](https://drive.google.com/drive/folders/17E6uIojZfb6mDiVap-ALPhdPtKCJTgAI?usp=sharing), y descomprimirlo en una carpeta en sus Documentos, identificable.
+
+Una vez que tienen la carpeta descargada y extraida, vamos a cargar los paquetes. Si no los tienen instalados, habrá que instalarlos con `install.packages("")`
+
+```{r, eval=TRUE, echo =TRUE, message=FALSE, warning=FALSE}
+#Instalo los paquetes si no los tengo instalados (solo se instalan una vez)
+# install.packages("tidyverse") #ojo con las comillas
+# install.packages("redatam")
+# install.packages("flextable")
+
+# Cargo los paquetes 
+library(redatamx)
+library(tidyverse)
+library(flextable)
+
+```
+
+Una vez cargados los paquetes vamos a trabajar con el RedatamX. Este es un paquete que permite manipular el Censo desde R.
+
+```{r, echo =TRUE, warning=FALSE}
+
+# Apuntá al archivo .rxdb (el diccionario principal)
+dic <- redatam_open('/home/demian/Documentos/ESPEJO/Rcran/Censo 2022/bases_censo2022_RedatamX/Base_PO_A_IG/cpv2022.rxdb')
+
+# Ver las entidades disponibles (VIVIENDA, HOGAR, PERSONA, etc.)
+# redatam_entities(dic)
+
+# Ver variables de una entidad
+personas<-redatam_variables(dic, "PERSONA")
+
+set_flextable_defaults(  #un poco de diseño para la tabla
+  font.family = "Arial",
+  big.mark = ".",
+  decimal.mark = ","
+)
+
+# Ver los valores/etiquetas de identidad de género
+identidad <- redatam_query(dic, "freq PERSONA.P03") %>% 
+  mutate(porc = round(value / sum(value) * 100, 2))
+flextable(identidad) %>% 
+  autofit()
+
+tt <- c("Mujer trans/travesti", "Varón trans/masculinidad trans", "No binario", "Otra identidad/ninguna de las anteriores")
+
+```
+
+Bien, aca ya tenemos los primeros datos interesantes. Según el censo hay `r identidad[identidad$P031_label == "Mujer trans/travesti", 3]` Mujeres trans/travesti, y  `r identidad[identidad$P031_label == "Varón trans/masculinidad trans", 3]` Varones trans/travesti. Asimismo, `r identidad[identidad$P031_label == "No binario", 3]` personas No binarie. 
+
+Si sumamos todas las identidades de la diversidad sexual totalizan \colorbox{yellow}{`r sum(identidad$value[identidad$P031_label %in% tt])`} personas.
+
+### Cruce con sexo asignado al nacer
+
+Podemos cruzar ahora estas identidades con la pregunta 2, "Sexo asignado al nacer", para ver bien como es el tema de la identidad de género
+
+```{r, echo=TRUE, warning=FALSE}
+trans_nacion <- redatam_query(dic, "freq PERSONA.P02 by PERSONA.P03")  
+flextable(trans_nacion) %>% 
+  autofit() %>% 
+  fit_to_width(max_width = 5.9)
+
+```
+
+Oooops. Vemos que está lleno de errores. Varios cruces son imposibles, y aca se ve que son mayoritarios. Por ejemplo, sería imposible que una persona de sexo asignado al nacer "Mujer", sea luego "Mujer trans". Lo mismo con los Varons y Varones Trans. Luego, hay Varones que tuvieron su sexo asignado al nacer como "Mujer", lo que nos indica que son varones Trans, y están clasificados en la tabla como varones. Este cruce nos muestra que es necesario hacer varias correcciones:
+
+```{r, echo= TRUE, warning=FALSE}
+
+trans_corr <- trans_nacion %>% 
+  mutate(identidad = case_when(
+    P021_label == "Mujer/Femenino" & P032_label %in% c("Mujer", "Ignorado") ~ "Mujer Cis", 
+    P021_label == "Mujer/Femenino" & P032_label %in% c("Mujer trans/travesti", "Varón", "Varón trans/masculinidad trans", "Otra identidad/ninguna de las anteriores") ~ "Varon TT",
+    P021_label == "Varón/Masculino" & P032_label %in% c("Varón", "Ignorado") ~ "Varon Cis",
+    P021_label == "Varón/Masculino" & P032_label %in% c("Mujer trans/travesti", "Mujer", "Varón trans/masculinidad trans", "Otra identidad/ninguna de las anteriores") ~ "Mujer TT",
+    P032_label == "No binario" ~ "No Binarie", 
+    P032_label == "Prefiero no contestar" ~ "NS/NC"
+  )) %>% 
+  group_by(identidad) %>% 
+  summarise(total = sum(value)) %>% 
+  mutate(porc = round(total/sum(total)*100, 2))
+
+flextable(trans_corr) %>% 
+ autofit() %>% 
+  fit_to_width(max_width = 5.9)
+```
+Ahora los datos nos muestran otra cosa. 
+
+Con las correcciones necesarias, las identidades de la diversidad sexual son \colorbox{yellow}{`r sum(trans_corr$total[trans_corr$identidad %in% c("Mujer TT", "Varon TT", "No Binarie")])`} personas. Más del doble que con la versión original.
