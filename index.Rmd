@@ -55,7 +55,7 @@ Introducción a la metodología cuantitativa. Diferencias con investigaciones cu
 
 ### Clase 2. 16 de Julio.  Introducción a la ciencia de datos
 
-- Sosa Escudero, [Big Data](https://drive.google.com/file/d/1N0-PntfrLKh-UNqEu9MexNwK8qvA0VAB/view?usp=sharing), Cap. 1 "Perdidos en el Océano de datos" y Cap. "Gran Hermano".
+- Sosa Escudero, [Big Data](https://drive.google.com/file/d/1N0-PntfrLKh-UNqEu9MexNwK8qvA0VAB/view?usp=sharing), Cap. 1 "Perdidos en el Océano de datos".
 
 - Fundar, [Datos y Algoritmos para el desarrollo](https://drive.google.com/file/d/1r57K2u2w0FkQ71L_UrKM_YxNLLoW_xa5/view?usp=sharing), mayo 2021.
 
