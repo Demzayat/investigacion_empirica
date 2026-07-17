@@ -1,0 +1,92 @@
+---
+title: "Pearson. 1078 pares Estatura de padres e hijos"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE,
+                       fig.width = 7, fig.height = 5, dpi = 200)
+library(tidyverse)
+library(UsingR)
+# Ajustá la ruta/carga de tus datos acá
+ padres_hijos <- father.son
+
+promedios <- padres_hijos |> 
+  mutate(fheight_redondeado = round(fheight)) |> 
+  group_by(fheight_redondeado) |> 
+  summarise(hijo_prom = mean(sheight, na.rm = TRUE), n = n())
+```
+
+
+### Paso 1: los datos individuales
+
+```{r puntos}
+ggplot(padres_hijos, aes(x = fheight, y = sheight)) +
+  geom_point(alpha = 0.4, position = position_jitter(width = 0.3, height = 0.3)) +
+  labs(
+    title = "Estatura de padres vs. estatura de hijos",
+   
+    x = "Estatura del padre",
+    y = "Estatura del hijo"
+  ) +
+  theme_minimal(base_size = 16)
+```
+
+---
+
+### Paso 2: promedio de hijos por estatura del padre
+
+```{r puntos_rojos}
+ggplot(padres_hijos, aes(x = fheight, y = sheight)) +
+  geom_point(alpha = 0.4, position = position_jitter(width = 0.3, height = 0.3)) +
+  geom_point(data = promedios, aes(x = fheight_redondeado, y = hijo_prom),
+             color = "red", size = 3) +
+  labs(
+    title = "Estatura de padres vs. estatura de hijos",
+
+    x = "Estatura del padre",
+    y = "Estatura del hijo"
+  ) +
+  theme_minimal(base_size = 16)
+```
+
+---
+
+### Paso 3: la línea de identidad (padre = hijo)
+
+```{r linea_ab}
+ggplot(padres_hijos, aes(x = fheight, y = sheight)) +
+  geom_point(alpha = 0.4, position = position_jitter(width = 0.3, height = 0.3)) +
+  geom_point(data = promedios, aes(x = fheight_redondeado, y = hijo_prom),
+             color = "red", size = 3) +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "gray50") +
+  labs(
+    title = "Estatura de padres vs. estatura de hijos",
+ 
+    x = "Estatura del padre",
+    y = "Estatura del hijo"
+  ) +
+  theme_minimal(base_size = 16)
+```
+
+---
+
+### Paso 4: la línea de regresión
+
+```{r linea_regresion}
+ggplot(padres_hijos, aes(x = fheight, y = sheight)) +
+  geom_point(alpha = 0.4, position = position_jitter(width = 0.3, height = 0.3)) +
+  geom_point(data = promedios, aes(x = fheight_redondeado, y = hijo_prom),
+             color = "red", size = 3) +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "gray50") +
+  geom_smooth(method = "lm", se = TRUE, color = "steelblue") +
+  labs(
+    title = "Estatura de padres vs. estatura de hijos",
+    x = "Estatura del padre",
+    y = "Estatura del hijo"
+  ) +
+  theme_minimal(base_size = 16)
+```
