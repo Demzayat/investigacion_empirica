@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Evaluación de impacto</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Investigación Empírica y Cuantitativa para las políticas públicas — Maestría Derecho y Gobierno - UBA" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Evaluación de impacto
+]
+.subtitle[
+## Conceptos fundamentales y métodos
+]
+.author[
+### Investigación Empírica y Cuantitativa para las políticas públicas — Maestría Derecho y Gobierno - UBA
+]
+.date[
+### 29/07/2026
+]
+
+---
+
+
+
+
+class: separador, center, middle
+
+# Evaluación de impacto
+## De la pregunta causal a los métodos
+
+.chico[Basado en Gertler, Martinez, Premand, Rawlings y Vermeersch,
+*La evaluación de impacto en la práctica*, 2.ª ed. (Banco Mundial / BID), caps. 1-8]
+
+---
+
+## Hoja de ruta
+
+**Parte I — ¿Por qué y qué evaluamos?**
+
+- Qué es una evaluación de impacto · prospectiva vs. retrospectiva · eficacia vs. efectividad · ética
+- Teoría del cambio y cadena de resultados
+
+**Parte II — El problema causal**
+
+- Inferencia causal, fórmula básica y contrafactual
+- Las dos estimaciones falsas del contrafactual
+
+**Parte III — Los métodos**
+
+- Asignación aleatoria · Regresión discontinua · Diferencias en diferencias · Pareamiento
+
+---
+
+## ¿Qué es una evaluación de impacto?
+
+.concepto[
+Una **evaluación de impacto** mide los cambios en el bienestar de los individuos
+que se pueden **atribuir** a un proyecto, programa o política específicos.
+]
+
+El sello distintivo es la **atribución**: el reto es identificar la relación causal
+entre el programa y los resultados de interés.
+
+Responde a una pregunta muy precisa:
+
+.formula[
+¿Cuál es el **impacto** (o efecto causal) de un programa en un resultado de interés?
+]
+
+Se distingue así del **monitoreo** (seguimiento continuo de insumos, actividades y
+productos) y de las evaluaciones que responden preguntas **descriptivas** o
+**normativas**.
+
+---
+
+## Prospectiva vs. retrospectiva
+
+.izq-50[
+### Prospectiva
+
+.definicion[Se diseña y elabora **antes** de implementar el programa, y se incorpora a su implementación.]
+
+- Permite recolectar **datos de línea de base**
+- Obliga a definir objetivos y medidas de éxito al planificar
+- Los grupos de tratamiento y comparación se definen **ex ante**
+]
+
+.der-50[
+### Retrospectiva
+
+.definicion[Evalúa el impacto **después** de implementado el programa; los grupos se generan **ex post**.]
+
+- Depende de datos preexistentes y de reglas de asignación claras
+- Su viabilidad **nunca está garantizada**
+- Suele apoyarse en métodos cuasi-experimentales y supuestos más fuertes
+]
+
+.clear[]
+
+.centro[**Las prospectivas tienen más probabilidad de generar contrafactuales válidos.**]
+
+---
+
+## Eficacia vs. efectividad
+
+.izq-50[
+### Estudios de eficacia
+
+.definicion[¿El programa **puede** funcionar en condiciones ideales?]
+
+- Entornos controlados, escala piloto
+- Fuerte participación técnica de los investigadores
+- Sirven como **prueba de concepto**
+- Generalización limitada
+]
+
+.der-50[
+### Estudios de efectividad
+
+.definicion[¿El programa **realmente** funciona en condiciones normales?]
+
+- Vías de implementación regulares, escala real
+- Resultados generalizables a la población de interés
+- Es lo que le importa a quien decide políticas
+]
+
+.clear[]
+
+.chico[Si un programa no genera impacto bajo condiciones cuidadosamente manejadas,
+difícilmente funcione desplegado en circunstancias normales. Pero lo inverso no es
+automático: los cálculos de costo-beneficio cambian con la escala.]
+
+---
+
+## Consideraciones éticas
+
+- Punto de partida: **invertir recursos públicos en programas de efectividad desconocida
+  también plantea un problema ético**. La falta de evaluación no es neutral.
+
+- Principio básico: **no negar ni retrasar** intervenciones de beneficio conocido
+  únicamente en función de los objetivos de la evaluación.
+
+- Las evaluaciones **no deberían dictar cómo se asignan los beneficios**: deben ajustarse
+  a reglas de asignación equitativas y transparentes. Los reparos éticos suelen provenir
+  de las reglas de operación del programa, no de la evaluación en sí.
+
+- Cuando los recursos son limitados, la **asignación aleatoria** satisface el requisito
+  de que todos los elegibles tengan la misma oportunidad de ser destinatarios.
+
+- Es además **investigación con seres humanos**: comités de ética, consentimiento,
+  plan de análisis previo, registro del estudio, datos y códigos replicables.
+
+.fuente[Cap. 1 y cap. 13.]
+
+---
+
+## La teoría del cambio
+
+.concepto[
+Una **teoría del cambio** es la descripción de cómo se supone que una intervención
+conseguirá los resultados deseados: expone la **lógica causal** de cómo y por qué un
+programa logrará los resultados previstos.
+]
+
+- Describe una **secuencia de eventos** que generan resultados
+- Explicita **condiciones y supuestos** necesarios para que el cambio ocurra
+- Mapea las intervenciones a lo largo de las vías causales
+
+Es **la base de cualquier evaluación de impacto**, porque la evaluación es causal por
+definición. El mejor momento para construirla es al **comienzo del diseño**, con todas
+las partes interesadas, para forjar una visión común de los objetivos y del camino
+para alcanzarlos.
+
+.fuente[Cap. 2.]
+
+---
+
+## La cadena de resultados
+
+.concepto[
+Una **cadena de resultados** establece la secuencia de insumos, actividades y productos
+que previsiblemente mejorarán los resultados y los resultados finales.
+]
+
+.cadena[
+.eslabon[**Insumos** Recursos financieros, humanos y de otro tipo movilizados para realizar las actividades.]
+.eslabon[**Actividades** Acciones o trabajo realizado para transformar los insumos en productos.]
+.eslabon[**Productos** Bienes y servicios tangibles, bajo control directo de la agencia ejecutora.]
+.eslabon[**Resultados** Uso de los productos por la población beneficiaria. No totalmente bajo control de la agencia.]
+.eslabon[**Resultados finales** Objetivos de largo plazo. Dependen de múltiples factores.]
+]
+
+&lt;div class="tramo"&gt;
+&lt;div style="flex:2"&gt;Implementación (LADO DE LA OFERTA)&lt;/div&gt;
+&lt;div style="flex:3"&gt;Resultados (LADO DE LA DEMANDA + LADO DE LA OFERTA)&lt;/div&gt;
+&lt;/div&gt;
+
+.fuente[Adaptado del gráfico 2.1.]
+
+---
+class: separador, center, middle
+
+# II. El problema causal
+
+---
+
+## Correlación no es causalidad
+
+.centro[
+&lt;img src="https://www.ciencia-explicada.com/wp-content/uploads/2013/06/correlation11.png" width="62%" class="img-centro"&gt;
+]
+
+.chico[Muchas preguntas de política son de causa y efecto: ¿la formación docente mejora
+los puntajes? ¿las transferencias condicionadas mejoran la salud infantil? Observar que
+dos cosas se mueven juntas **no alcanza** para establecer causalidad.]
+
+
+---
+
+## La fórmula básica de la evaluación de impacto
+
+.concepto[
+Las evaluaciones de impacto establecen **hasta qué punto un programa —y sólo ese
+programa— provocó un cambio en un resultado**.
+]
+
+`$$\Delta = (Y \mid P = 1) - (Y \mid P = 0)$$`
+
+El impacto causal `\(\Delta\)` de un programa `\(P\)` sobre un resultado `\(Y\)` es la diferencia
+entre el resultado **con** el programa (`\(P=1\)`) y **el mismo resultado sin** el programa
+(`\(P=0\)`), para **la misma unidad, en el mismo momento del tiempo**.
+
+--
+
+La fórmula vale para **cualquier unidad de análisis** que pueda beneficiarse del
+programa o verse afectada por él:
+
+.centro[.secundario[personas · hogares · comunidades · empresas · escuelas · hospitales · juzgados]]
+
+Y para **cualquier resultado** `\(Y\)` relacionado con el programa.
+
+.fuente[Cap. 3.]
+
+---
+
+## El problema del contrafactual
+
+.concepto[
+El **contrafactual** es lo que habría ocurrido —cuál habría sido el resultado `\(Y\)` para
+un participante del programa— **en ausencia** del programa `\(P\)`.
+]
+
+El problema: es **imposible medir al mismo sujeto en dos realidades distintas al mismo
+tiempo**. En cualquier momento, o participó o no participó.
+
+- `\((Y \mid P = 1)\)` → **se observa**: basta medir el resultado del participante
+- `\((Y \mid P = 0)\)` → **no se observa**: hay que **estimarlo**
+
+--
+
+.definicion[
+**El ejemplo de la píldora.** El "señor Desafortunado" toma una píldora y muere cinco
+días después. ¿La píldora lo mató? Quizá ya estaba muy enfermo cuando la tomó. Para
+inferir causalidad hay que establecer **qué le habría pasado si no la hubiera tomado**.
+Eso es el contrafactual.
+]
+
+---
+
+## Del clon perfecto al grupo de comparación
+
+La solución ideal sería un **clon perfecto** del participante: idéntico en todo, salvo
+que no recibe el programa. Comparamos y listo.
+
+En la realidad los clones perfectos no existen —ni siquiera entre gemelos idénticos.
+Por eso, en vez del impacto sobre un individuo, se estima el **impacto promedio sobre
+un grupo**.
+
+.concepto[
+Un **grupo de comparación válido**: (1) tiene las mismas características, **en promedio**,
+que el grupo de tratamiento en ausencia del programa; (2) **no es afectado** por el
+programa, ni directa ni indirectamente; y (3) **reaccionaría al programa de la misma
+manera** que el grupo de tratamiento, si fuera objeto de él.
+]
+
+Sin un grupo de comparación que estime con precisión el contrafactual, el impacto
+estimado **no es válido**: en términos estadísticos, es .acento[**sesgado**].
+
+---
+
+## Contrafactual falso 1: comparación antes-después
+
+Usa como contrafactual el **resultado del propio grupo de tratamiento antes** del
+programa. Supone que, sin programa, nada habría cambiado.
+
+&lt;img src="evaluacion_impacto_clase_files/figure-html/antes-despues-1.png" alt="" width="72%" style="display: block; margin: auto;" /&gt;
+
+.chico[Si hubo sequía, el verdadero contrafactual es **D** y el impacto es mayor que A−B.
+Si mejoraron las lluvias, es **C** y el impacto es menor. Sin controlar por todos los
+factores que varían en el tiempo, el resultado de línea de base **casi nunca** es una
+buena estimación del contrafactual.]
+
+.fuente[Adaptado del gráfico 3.3.]
+
+---
+
+## Contrafactual falso 2: inscritos vs. no inscritos
+
+Compara a quienes **eligieron inscribirse** con quienes, siendo elegibles,
+**eligieron no hacerlo**.
+
+**Ejemplo:** un programa de orientación profesional para jóvenes desempleados. Dos años
+después, los inscritos ganan el doble que los no inscritos. ¿Impacto del programa?
+
+--
+
+Probablemente no. Los dos grupos son **distintos de entrada**:
+
+- Quienes se inscribieron pueden estar más motivados o esperar un retorno alto
+- Quienes no lo hicieron pueden ser jóvenes desanimados
+- El mismo problema aparece si la admisión depende de **preferencias no observadas de
+  los administradores** (por ejemplo, una entrevista)
+
+.concepto[
+El **sesgo de selección** se produce cuando los motivos por los que un individuo
+participa en un programa están **correlacionados con los resultados**, incluso en
+ausencia del programa.
+]
+
+Eliminarlo es uno de los objetivos centrales de toda evaluación de impacto.
+
+---
+class: separador, center, middle
+
+# III. Los métodos
+
+---
+
+## Asignación aleatoria
+
+.concepto[
+En la **asignación aleatoria**, cada unidad elegible tiene la misma probabilidad de ser
+seleccionada para el tratamiento, lo que asegura la equivalencia entre los grupos de
+tratamiento y comparación tanto en las características **observables** como en las
+**no observables**.
+]
+
+.poblacion[Población de unidades elegibles]
+
+.flechas[La asignación aleatoria conserva las características&amp;nbsp;&amp;nbsp;↙&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;↘&amp;nbsp;&amp;nbsp;La asignación aleatoria conserva las características]
+
+.izq-50[.grupo-caja.grupo-trat[Grupo de tratamiento&lt;br&gt;.chico[asignado al tratamiento]]]
+.der-50[.grupo-caja.grupo-comp[Grupo de comparación&lt;br&gt;.chico[no asignado al tratamiento]]]
+
+.clear[]
+
+.chico[Con un número suficientemente grande de unidades, cualquier característica de la
+población se transfiere a ambos grupos: si el 40% eran mujeres, ~40% lo serán en cada
+grupo. Lo mismo vale para lo difícil de observar —motivación, preferencias, rasgos de
+personalidad—. Por eso se la considera la **regla de oro** de la evaluación de impacto.]
+
+.fuente[Adaptado del gráfico 4.1.]
+
+---
+
+## Validez interna y validez externa
+
+.izq-50[
+### Validez interna
+
+.definicion[Una evaluación tiene validez interna si proporciona una **estimación precisa del contrafactual** mediante un grupo de comparación válido.]
+
+El impacto estimado está libre de factores de confusión.
+
+Se asegura mediante la **asignación aleatoria del tratamiento**.
+]
+
+.der-50[
+### Validez externa
+
+.definicion[Una evaluación tiene validez externa si la **muestra representa con precisión a la población de unidades elegibles**.]
+
+Los resultados pueden generalizarse al conjunto de la población.
+
+Se asegura mediante el **muestreo aleatorio**.
+]
+
+.clear[]
+
+.chico[Son **dos usos distintos del azar**. Se puede tener validez interna sin validez
+externa (asignación aleatoria en una muestra no representativa) y viceversa (muestra
+representativa pero grupo de comparación inválido). A veces hay que **equilibrar** entre
+ambas.]
+
+---
+
+## ¿Cuándo puede aplicarse?
+
+La asignación aleatoria funciona como regla de asignación en **dos escenarios**:
+
+### 1. La población elegible es mayor que las plazas disponibles
+
+Cuando la demanda supera la oferta, un sorteo selecciona el grupo de tratamiento.
+Quienes ganan el sorteo son tratamiento; el resto, comparación.
+
+.chico[*Ej.: un programa financia bibliotecas para un tercio de las escuelas públicas del país.*]
+
+### 2. El programa se amplía de manera progresiva
+
+Cuando se despliega por etapas, se aleatoriza el **orden** en que los beneficiarios
+—todos igualmente merecedores— reciben el programa. Los que entran más tarde son el
+grupo de comparación de los primeros.
+
+.chico[*Ej.: capacitar a 15.000 enfermeros en tres años, un tercio por año.*]
+
+.concepto[
+Ventaja adicional: es una regla **justa, transparente y difícil de manipular**, que
+protege a los administradores de acusaciones de favoritismo.
+]
+
+---
+
+## Diseño de regresión discontinua (DRD)
+
+.concepto[
+El **DRD** es adecuado para programas que usan un **índice continuo** para clasificar a
+los participantes potenciales y que tienen una **puntuación límite** en ese índice, la
+cual determina quién tiene derecho a beneficiarse del programa.
+]
+
+Cuatro condiciones:
+
+1. El índice debe clasificar a las unidades de manera **continua** (índice de pobreza,
+   puntajes de pruebas, edad; **no** categorías discretas como "empleado / desempleado")
+2. Debe haber una **puntuación límite claramente definida**
+3. La puntuación límite debe ser **única para el programa** de interés
+4. La puntuación **no debe poder manipularse** por encuestadores, beneficiarios,
+   administradores ni políticos
+
+El DRD estima el impacto **en torno al límite**: diferencia entre el resultado promedio
+de las unidades del lado tratado y el del lado no tratado.
+
+---
+
+## DRD: la situación en la línea de base
+
+.chico[Programa que subsidia fertilizantes a fincas de **menos de 50 hectáreas**. Antes del programa, las fincas pequeñas producen menos que las grandes: la relación es **continua**, sin saltos.]
+
+&lt;img src="evaluacion_impacto_clase_files/figure-html/drd-base-1.png" alt="" width="80%" style="display: block; margin: auto;" /&gt;
+
+.fuente[Adaptado del gráfico 6.1.]
+
+---
+
+## DRD: la situación en el seguimiento
+
+&lt;img src="evaluacion_impacto_clase_files/figure-html/drd-seguimiento-1.png" alt="" width="80%" style="display: block; margin: auto;" /&gt;
+
+.chico[Las fincas **demasiado grandes** para inscribirse estiman el contrafactual de las que eran **justo lo suficientemente chicas**. Como el impacto se identifica en la vecindad del límite, es un efecto **local** (LATE): no sabemos qué pasa con fincas de 10 o 20 ha. A cambio, **ninguna unidad elegible queda sin tratamiento** por razones de evaluación.]
+
+.fuente[Adaptado del gráfico 6.2.]
+
+---
+
+## Diferencias en diferencias (DD)
+
+.concepto[
+El método de **diferencias en diferencias** compara los **cambios** en los resultados a
+lo largo del tiempo entre unidades inscritas en un programa (tratamiento) y unidades no
+inscritas (comparación). Permite corregir cualquier diferencia entre los grupos que sea
+**constante a lo largo del tiempo**.
+]
+
+La idea: combinar las **dos estimaciones falsas** del contrafactual para producir una
+mejor.
+
+- La **primera diferencia** (antes-después en el grupo tratado) controla por todo lo que
+  es fijo en ese grupo... pero deja en pie los factores que **varían en el tiempo**
+- La **segunda diferencia** (antes-después en el grupo no tratado) captura justamente
+  esos factores variables en el tiempo
+- Restando una de otra se elimina una fuente importante de sesgo
+
+Se anulan no sólo las características **observables** invariantes en el tiempo, sino
+también las **no observables** (rasgos de personalidad, historia familiar, cultura
+institucional).
+
+---
+
+## DD: el cálculo
+
+.izq-60[
+&lt;img src="evaluacion_impacto_clase_files/figure-html/dd-grafico-1.png" alt="" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.der-40[
+&lt;br&gt;
+
+|  | Después | Antes | Dif. |
+|---|---|---|---|
+| **Tratamiento** | 0,74 | 0,60 | **0,14** |
+| **Comparación** | 0,81 | 0,78 | **0,03** |
+| **Diferencia** | −0,07 | −0,18 | **0,11** |
+
+&lt;br&gt;
+
+.formula[$DD = (B-A) - (D-C)$]
+
+.chico[Equivalentemente:&lt;br&gt;$DD = (B-D) - (A-C)$]
+]
+
+.clear[]
+
+.fuente[Adaptado del gráfico 7.1 y el cuadro 7.1.]
+
+---
+
+## DD: el supuesto crítico
+
+.concepto[
+**Supuesto de tendencias iguales:** en ausencia del programa, los resultados del grupo
+de tratamiento habrían evolucionado siguiendo la **misma tendencia** que los del grupo
+de comparación (el trayecto A → E del gráfico anterior).
+]
+
+Los grupos **no necesitan** tener el mismo nivel antes de la intervención. Necesitan
+tener la misma **trayectoria**. Y ese supuesto **no es verificable directamente** —el
+contrafactual sigue siendo inobservable—. Cuatro formas de ponerlo a prueba:
+
+1. **Tendencias previas**: verificar que los dos grupos se movían en paralelo antes del programa
+2. **Prueba de placebo con grupo falso**: estimar el DD con un grupo que sabemos que no fue afectado; debería dar cero
+3. **Prueba de placebo con resultado falso**: estimar el impacto sobre un resultado que el programa no puede afectar
+4. **Grupos de comparación alternativos**: si ambos son válidos, el impacto estimado debería ser similar
+
+.fuente[Cap. 7.]
+
+---
+
+## Pareamiento (*matching*)
+
+.concepto[
+El **pareamiento** utiliza grandes bases de datos y técnicas estadísticas para construir
+el mejor grupo de comparación posible **sobre la base de características observables**.
+]
+
+Para cada unidad tratada se busca una unidad no tratada (o un conjunto) con
+características lo más parecidas posible.
+
+.izq-50[
+.chico[**Unidades tratadas**]
+
+| Edad | Género | Meses desemp. | Sec. |
+|---|---|---|---|
+| 19 | 1 | 3 | 0 |
+| 35 | 1 | 12 | 1 |
+| 24 | 1 | 8 | 1 |
+| 27 | 0 | 4 | 1 |
+| 41 | 0 | 17 | 1 |
+]
+
+.der-50[
+.chico[**Unidades no tratadas**]
+
+| Edad | Género | Meses desemp. | Sec. |
+|---|---|---|---|
+| 19 | 1 | 3 | 0 |
+| 38 | 0 | 1 | 0 |
+| 24 | 1 | 8 | 1 |
+| 27 | 0 | 4 | 0 |
+| 41 | 0 | 17 | 1 |
+]
+
+.clear[]
+
+.chico[Problema: la **maldición de la dimensionalidad**. Con pocas características se
+encuentran parejas, pero se dejan afuera variables importantes; con muchas, deja de
+haber parejas disponibles.]
+
+.fuente[Adaptado del gráfico 8.1.]
+
+---
+
+## Puntaje de propensión y rango común
+
+.concepto[
+El **puntaje de propensión** es la probabilidad estimada de que una unidad se inscriba
+en el programa, dadas sus características observables **de línea de base**. Se parean
+las unidades con puntajes más cercanos.
+]
+
+.izq-60[
+&lt;img src="evaluacion_impacto_clase_files/figure-html/rango-comun-1.png" alt="" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.der-40[
+&lt;br&gt;
+
+.chico[
+En las **colas** falta superposición:
+
+- Inscritos con puntaje cercano a **1** no tienen par
+- No inscritos con puntaje cercano a **0** tampoco
+
+El pareamiento estima entonces un efecto **local** (LATE), sólo sobre el rango común.
+
+**Límite de fondo:** sólo controla por lo **observable**. Si la inscripción depende de
+algo no observado, el sesgo persiste.
+]
+]
+
+.clear[]
+
+.fuente[Adaptado del gráfico 8.2.]
+
+---
+
+## Pareamiento combinado con otros métodos
+
+Los usos más convincentes del pareamiento son los que **no lo usan solo**.
+
+### Diferencias en diferencias pareadas
+
+Si hay datos de línea de base sobre los resultados, se combinan ambos métodos:
+
+1. Parear a partir de características observables **de línea de base**
+2. Calcular el cambio antes-después de cada unidad inscrita *(primera diferencia)*
+3. Calcular el cambio antes-después de su comparación pareada *(segunda diferencia)*
+4. Restar la segunda de la primera
+5. Promediar esas dobles diferencias
+
+.chico[Ventaja: al pareamiento (que controla lo observable) se le suma el DD, que además
+neutraliza las **características no observables constantes en el tiempo**.]
+
+---
+
+## Síntesis: elegir el método
+
+| Método | Qué necesita | Estima |
+|---|---|---|
+| **Asignación aleatoria** | Exceso de demanda o despliegue por etapas | Impacto promedio (ATE) |
+| **Regresión discontinua** | Índice continuo + límite claro y no manipulable | Efecto local en el límite (LATE) |
+| **Diferencias en diferencias** | Datos antes y después en ambos grupos | Impacto bajo tendencias iguales |
+| **Pareamiento** | Base de datos rica en características observables | Impacto sobre el rango común |
+
+.concepto[
+La elección **no es una preferencia teórica**: depende de las características operativas
+del programa —recursos disponibles, criterios de elegibilidad y plazos de
+implementación—. Reglas de asignación claras, equitativas y transparentes casi siempre
+permiten encontrar un buen diseño de evaluación.
+]
+
+---
+exclude: true
+class: separador, center, middle
+
+# ¿Preguntas?
+
+.chico[Gertler, P., Martinez, S., Premand, P., Rawlings, L. y Vermeersch, C. (2017).&lt;br&gt;
+*La evaluación de impacto en la práctica*, 2.ª edición. Banco Mundial / BID.&lt;br&gt;
+www.worldbank.org/ieinpractice]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false,
+  "ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

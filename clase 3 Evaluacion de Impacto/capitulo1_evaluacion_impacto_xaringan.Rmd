@@ -1,0 +1,363 @@
+---
+title: "¿Por qué evaluar?"
+subtitle: "Cap. 1 — La evaluación de impacto en la práctica"
+author: "Acceso a la Justicia y Litigio Constitucional — UBA"
+date: "`r format(Sys.Date(), '%d/%m/%Y')`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [default, metropolis, metropolis-fonts]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+class: center, middle, inverse
+
+# ¿Por qué evaluar?
+## Gertler, Martinez, Premand, Rawlings y Vermeersch — *La evaluación de impacto en la práctica* (BID/Banco Mundial), Cap. 1
+
+---
+
+## Objetivos de la clase
+
+Al final de esta clase vamos a poder:
+
+- Explicar por qué la **evaluación de impacto** es central en la formulación de políticas basadas en evidencia
+- Distinguir evaluación de impacto de **monitoreo** y de otros tipos de evaluación
+- Identificar qué pregunta responde una evaluación de impacto (causalidad / contrafactual)
+- Diferenciar evaluaciones **prospectivas vs. retrospectivas** y estudios de **eficacia vs. efectividad**
+- Reconocer los enfoques complementarios (costo-beneficio, métodos mixtos, evaluación de procesos)
+- Identificar **cuándo conviene** (y cuándo no) hacer una evaluación de impacto
+
+---
+
+## ¿Por qué evaluar?
+
+--
+
+- Los programas de desarrollo buscan **cambiar resultados** (ingresos, aprendizaje, salud)
+
+--
+
+- Pero suele medirse solo **insumos y productos**: cuánta plata se gastó, cuántos libros se repartieron, cuánta gente participó
+
+--
+
+- Lo que falta preguntar: **¿el programa logró sus objetivos?**
+
+--
+
+.pull-center[
+> Las evaluaciones de impacto son parte de una agenda más amplia: la **formulación de políticas públicas basada en evidencia**
+]
+
+---
+
+## La formulación de políticas basada en evidencia
+
+Cambio de enfoque global: de mirar **insumos** → a mirar **productos y resultados**
+
+¿Para qué sirve centrarse en resultados?
+
+- Definir y monitorear objetivos nacionales e internacionales
+- Mejorar la **rendición de cuentas**
+- Orientar las **asignaciones presupuestarias**
+- Informar el **diseño** de programas y decisiones de política
+
+---
+
+## Concepto clave: ¿qué es una evaluación?
+
+> Las evaluaciones son **valoraciones periódicas y objetivas** de un proyecto, programa o política — planificado, en curso o terminado.
+
+Responden preguntas específicas sobre:
+
+- **Diseño**
+- **Implementación**
+- **Resultados**
+
+A diferencia del monitoreo (permanente), la evaluación se hace en **momentos puntuales**, a menudo con mirada técnica externa.
+
+---
+
+## Tres tipos de preguntas de evaluación
+
+*(Imas y Rist, 2009)*
+
+1. **Descriptivas** — ¿qué está pasando? (procesos, condiciones, opiniones de actores)
+
+2. **Normativas** — ¿lo que pasa se corresponde con lo que debería pasar? (¿se cumplen los objetivos?)
+
+3. **Causa y efecto** — ¿qué diferencia produjo la intervención en los resultados? (**atribución**)
+
+--
+
+.pull-center[
+➡️ La evaluación de **impacto** se ocupa exclusivamente del tercer tipo
+]
+
+---
+
+## Monitoreo vs. Evaluación de impacto
+
+| | **Monitoreo** | **Evaluación de impacto** |
+|---|---|---|
+| Frecuencia | Continuo | Puntual |
+| Foco | Insumos, actividades, productos | Resultados atribuibles al programa |
+| Datos | Administrativos | Primarios + secundarios |
+| Pregunta | ¿Se está implementando como se planeó? | ¿El programa **causó** el cambio? |
+
+Ambos son necesarios y **complementarios**, no sustitutos.
+
+---
+
+## ¿Qué es la evaluación de impacto?
+
+> Mide los cambios en el bienestar de las personas que se pueden **atribuir** a un proyecto, programa o política específicos.
+
+El sello distintivo: la **atribución / causalidad**.
+
+--
+
+Pregunta básica:
+
+.pull-center[
+### ¿Cuál es el impacto (efecto causal) de un programa en un resultado de interés?
+]
+
+Ejemplos: ¿las becas mejoran la asistencia escolar? ¿la atención privada mejora el acceso a salud? ¿los caminos mejoran el ingreso de los hogares?
+
+---
+
+## El concepto central: el contrafactual
+
+Para estimar el efecto causal, toda evaluación de impacto necesita estimar el **contrafactual**:
+
+> Qué les habría pasado a los participantes **si no hubieran participado** en el programa
+
+--
+
+Como no podemos observar al mismo individuo "con" y "sin" programa a la vez, se construye un **grupo de comparación** lo más parecido posible al **grupo de tratamiento**.
+
+La validez de esa comparación = **validez interna** de la evaluación.
+
+---
+class: middle
+
+## Caso: Progresa/Oportunidades (México)
+
+Transferencias condicionadas (efectivo a madres, condicionado a escuela y salud)
+
+**Resultados de la evaluación:**
+
+- +0,7 años de escolaridad promedio (Schultz, 2004)
+- -23% incidencia de enfermedades infantiles (Gertler, 2004)
+- -1 cm de retraso en el crecimiento en niños de 12-36 meses (Behrman y Hoddinott, 2001)
+
+**Impacto en políticas:** el nuevo gobierno (tras elección 2000) decidió **continuar y ampliar** el programa en base a esta evidencia. Influyó en la adopción global de las transferencias condicionadas.
+
+---
+class: middle
+
+## Caso: Preescolar comunitario (Mozambique)
+
+Save the Children + evaluación aleatorizada (primera de este tipo en África rural)
+
+- +24% probabilidad de matricularse en primaria
+- +10% probabilidad de empezar a la edad correcta
+- +50% tiempo dedicado a tareas escolares
+- Beneficios indirectos: hermanos mayores y cuidadores con más tiempo para trabajar
+
+➡️ El gobierno de Mozambique **adoptó y amplió** el modelo a 600 comunidades
+
+---
+
+## ¿Qué determina el método de evaluación?
+
+La elección del método depende de las **características operativas del programa**:
+
+1. **Recursos disponibles** — ¿alcanza para todos los elegibles?
+2. **Criterios de elegibilidad** — ¿focalizado o universal?
+3. **Plazos de implementación** — ¿de una vez o por etapas?
+
+--
+
+.pull-center[
+> Reglas de operación **claras, equitativas y transparentes** → casi siempre permiten encontrar un buen diseño de evaluación
+]
+
+---
+
+## Evaluación prospectiva vs. retrospectiva
+
+.pull-left[
+### Prospectiva
+Se diseña *junto con* el programa, antes de implementarlo (línea de base ex ante)
+]
+
+.pull-right[
+### Retrospectiva
+Se evalúa el impacto *después*, con grupos armados ex post
+]
+
+--
+
+¿Por qué la prospectiva es preferible? (3 razones)
+
+1. Permite recolectar **datos de línea de base**
+2. Obliga a **definir objetivos y medidas de éxito** desde el diseño
+3. Los grupos de tratamiento/comparación se definen **antes** de implementar → contrafactual más sólido
+
+---
+
+## Eficacia vs. Efectividad
+
+.pull-left[
+### Eficacia
+¿El programa *puede* funcionar en condiciones ideales?
+
+Condiciones controladas / piloto — prueba de concepto
+]
+
+.pull-right[
+### Efectividad
+¿El programa *realmente* funciona en condiciones normales?
+
+Condiciones normales / a escala real
+]
+
+--
+
+La efectividad es la que importa para la **validez externa** y la generalización a políticas públicas.
+
+---
+class: middle
+
+## Caso: enfoque de "graduación" de la pobreza
+
+Evaluación **multisitio** simultánea en 6 países (Etiopía, Ghana, Honduras, India, Pakistán, Perú) — Banerjee et al., 2007
+
+- Mismo paquete: activos productivos + formación + coaching + salud + inclusión financiera
+- Mejoras en 8 de 10 dimensiones evaluadas (consumo, activos, ingresos, salud mental, etc.)
+- **Pero con variación entre países** (ej. consumo no mejoró en Honduras y Perú)
+
+➡️ Ilustra el valor — y los límites — de la **generalización** de resultados
+
+---
+
+## Enfoques complementarios a la evaluación de impacto
+
+La evaluación de impacto **sola** no alcanza para entender el "por qué". Se complementa con:
+
+- **Monitoreo** — verifica implementación real (quién recibió qué, cuándo)
+- **Simulaciones ex ante** — modelan efectos esperados *antes* de implementar
+- **Métodos mixtos** (cuanti + cuali) — explican el "por qué" de los resultados
+- **Evaluaciones de procesos** — analizan cómo funciona el programa en la práctica
+
+---
+
+## Métodos mixtos: 3 aproximaciones
+
+*(Creswell, 2014)*
+
+1. **Convergente paralelo** — se recolectan datos cuanti y cuali al mismo tiempo, se triangulan
+
+2. **Explicativo secuencial** — lo cualitativo explica resultados cuantitativos ya obtenidos (abre la "caja negra")
+
+3. **Exploratorio secuencial** — lo cualitativo ayuda a formular hipótesis *antes* del trabajo cuantitativo
+
+--
+
+**Ejemplo (India, recuadro 1.5):** un RCT no encontró impacto significativo, pero el estudio etnográfico explicó por qué (mala facilitación, falta de apoyo, estructuras de poder local) — y reveló efectos no anticipados.
+
+---
+
+## Análisis de costo-beneficio y costo-efectividad
+
+| | Pregunta que responde |
+|---|---|
+| **Costo-beneficio** | ¿Los beneficios totales superan los costos totales (en $)? |
+| **Costo-efectividad** | ¿Qué alternativa logra el mismo objetivo al menor costo relativo? |
+
+--
+
+**Caso (recuadro 1.7):** reformas pedagógicas y rendición de cuentas docente = más costo-efectivas que simplemente agregar insumos (ej. más maestros en Kenia no mejoró puntajes)
+
+---
+
+## Consideraciones éticas
+
+- La **falta de evaluación** también puede ser no-ética: invertir recursos públicos sin saber si funcionan
+
+- Principio básico: **no negar ni retrasar** beneficios de eficacia conocida solo por motivos de evaluación
+
+- La asignación **aleatoria** de beneficios, cuando los recursos son limitados, es éticamente defendible: da **igual oportunidad** a todos los elegibles
+
+- Toda evaluación de impacto es también investigación con seres humanos → comités de ética, transparencia, reproducibilidad
+
+---
+
+## ¿Para qué tipo de preguntas de política sirve?
+
+- **Efectividad básica**: ¿el programa funciona vs. no tener programa?
+
+- **Alternativas de diseño** ("ramas de tratamiento"): ¿qué modalidad es más efectiva? (ej. correo vs. visitas vs. SMS)
+
+- **Heterogeneidad**: ¿funciona mejor para algunos subgrupos que para otros?
+
+- **Generalización**: ¿los resultados se replican en otros países/contextos? (clusters de evaluación — SIEF, DIME, 3IE)
+
+---
+
+## ¿Cuándo vale la pena evaluar el impacto?
+
+Tres preguntas para decidir:
+
+1. **¿Qué está en juego?** (presupuesto, escala, decisiones clave)
+2. **¿Ya existe evidencia** de que el programa funciona?
+3. **¿Hay recursos** (datos, tiempo, plata, compromiso institucional) para una buena evaluación?
+
+--
+
+**La intervención debe ser:**
+
+Innovadora · Aplicable a escala · Estratégicamente relevante · No probada · Influyente en decisiones
+
+---
+
+## Síntesis del capítulo
+
+- La evaluación de impacto es una herramienta clave (no la única) de las políticas basadas en evidencia
+- Su sello distintivo: **causalidad y contrafactual**
+- El **diseño prospectivo** y las **reglas de asignación claras** son la base de evaluaciones rigurosas
+- Eficacia ≠ efectividad: cuidado con generalizar resultados de pilotos
+- Siempre es mejor **combinarla** con monitoreo, métodos mixtos y análisis de costos
+- No todo programa justifica una evaluación de impacto: hay que evaluar **estratégicamente**
+
+---
+
+## Para seguir leyendo
+
+- Khandker, Koolwal y Samad (2009) — *Handbook on Quantitative Methods of Program Evaluation*
+- Glennerster y Takavarasha (2013) — *Running Randomized Evaluations*
+- Sitio del libro: www.worldbank.org/ieinpractice
+
+---
+class: center, middle, inverse
+
+# ¿Preguntas?
+
+---
+
+inferencia causal
+
+![](https://www.ciencia-explicada.com/wp-content/uploads/2013/06/correlation11.png)
+

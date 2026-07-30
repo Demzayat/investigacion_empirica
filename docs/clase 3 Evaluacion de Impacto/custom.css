@@ -1,0 +1,252 @@
+/* ============================================================
+   custom.css — estilos para las diapositivas de evaluación de impacto
+   Editá libremente. Se carga DESPUÉS de metropolis, así que
+   todo lo que definas acá pisa al tema base.
+   ============================================================ */
+
+/* ============================================================
+   0. NEUTRALIZAR EL TEMA METROPOLIS
+   metropolis.css dibuja una franja oscura de 80px en el borde
+   superior de cada diapositiva y sube los h1 (-95px) para que
+   caigan adentro. Acá la sacamos y recuperamos ese espacio.
+   ============================================================ */
+.remark-slide-content,
+.title-slide,
+.separador,
+.inverse {
+  border-top: 0 !important;
+}
+
+/* metropolis define h1 { margin-top: -95px; color: #FAFAFA; } */
+.remark-slide-content h1 {
+  margin-top: 0;
+}
+
+/* ---------- 1. Paleta ---------- */
+:root {
+  --color-principal:   #2d1853;   /* azul oscuro: títulos, portada #23395B */
+  --color-acento:      #C0392B;   /* rojo: énfasis, impactos */
+  --color-secundario:  #1B7A6E;   /* verde azulado: grupo comparación */
+  --color-texto:       #2B2B2B;
+  --color-suave:       #6E7B8B;   /* gris: notas, fuentes */
+  --color-fondo-caja:  #F2F4F7;
+  --color-borde-caja:  #D3D9E0;
+}
+
+/* ---------- 2. Tipografía general ---------- */
+/* PALANCAS PARA GANAR ESPACIO: bajá font-size o padding si una diapo no entra */
+.remark-slide-content {
+  font-size: 21px;
+  color: var(--color-texto);
+  padding: 1.1em 3em 1em 3em;
+}
+
+.remark-slide-content h1 { font-size: 42px; color: var(--color-principal); }
+.remark-slide-content h2 {
+  font-size: 32px;
+  color: var(--color-principal);
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+.remark-slide-content h3 {
+  font-size: 25px;
+  color: var(--color-principal);
+  margin-bottom: .4em;
+}
+
+.remark-slide-content li { margin-bottom: .3em; }
+.remark-slide-content p  { margin: .5em 0; }
+
+strong { color: var(--color-principal); }
+
+/* Poné `class: compacta` en el encabezado de una diapo que quede larga */
+.compacta { font-size: 18px; }
+.compacta h2 { font-size: 28px; }
+.compacta li { margin-bottom: .15em; }
+.compacta p  { margin: .35em 0; }
+.compacta .concepto { font-size: 17px; padding: .5em .8em; margin: .5em 0; }
+
+/* ---------- 3. Portada y separadores ---------- */
+.title-slide {
+  background-color: var(--color-principal);
+}
+.title-slide h1, .title-slide h2, .title-slide h3 {
+  color: #FFFFFF;
+}
+/* metropolis compensaba la franja con padding-top:80px en el h1 */
+.title-slide h1 { padding-top: 1.2em; }
+/* la rayita naranja del tema, en el color de acento */
+.title-slide h2::after { background-color: var(--color-acento); color: var(--color-acento); }
+
+.title-slide .remark-slide-number { display: none; }
+
+/* Diapositivas separadoras de sección (class: separador) */
+.separador {
+  background-color: var(--color-principal);
+}
+.separador h1, .separador h2, .separador h3, .separador p {
+  color: #FFFFFF !important;
+}
+.separador .remark-slide-number { color: rgba(255,255,255,.5); }
+
+/* ---------- 4. Utilidades de texto ---------- */
+.chico     { font-size: 18px; }
+.muy-chico { font-size: 15px; line-height: 1.3; }
+.grande    { font-size: 30px; }
+
+.acento     { color: var(--color-acento); font-weight: 600; }
+.secundario { color: var(--color-secundario); font-weight: 600; }
+.gris       { color: var(--color-suave); }
+
+.centro { text-align: center; }
+
+/* Pie de fuente bibliográfica */
+.fuente {
+  font-size: 14px;
+  color: var(--color-suave);
+  font-style: italic;
+  margin-top: 1.2em;
+}
+
+/* ---------- 5. Caja de concepto clave ---------- */
+/* Uso: .concepto[Texto de la definición] */
+.concepto {
+  display: block;
+  background-color: var(--color-fondo-caja);
+  border-left: 5px solid var(--color-acento);
+  padding: .7em 1em;
+  margin: .8em 0;
+  font-size: 21px;
+}
+
+/* Variante sin color de fondo, sólo la barra */
+.definicion {
+  display: block;
+  border-left: 4px solid var(--color-principal);
+  padding-left: .9em;
+  margin: .8em 0;
+}
+
+/* ---------- 6. Columnas ---------- */
+/* remark genera <span>, así que forzamos display:block para que el float ande */
+.izq-50, .der-50, .izq-60, .der-40, .izq-40, .der-60 { display: block; }
+
+.izq-50, .der-50 { width: 48%; }
+.izq-50 { float: left; }
+.der-50 { float: right; }
+
+.izq-60 { float: left; width: 58%; }
+.der-40 { float: right; width: 38%; }
+
+.izq-40 { float: left; width: 38%; }
+.der-60 { float: right; width: 58%; }
+
+.clear { display: block; clear: both; }
+
+/* ---------- 7. Diagramas de cajas (cadena de resultados, etc.) ---------- */
+.cadena {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin: 1.2em 0;
+}
+.cadena .eslabon {
+  display: block;
+  flex: 1;
+  background-color: var(--color-fondo-caja);
+  border: 1px solid var(--color-borde-caja);
+  border-top: 4px solid var(--color-principal);
+  border-radius: 3px;
+  padding: .6em .5em;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.25;
+}
+/* markdown convierte **texto** en <strong> */
+.cadena .eslabon strong {
+  display: block;
+  font-size: 16px;
+  color: var(--color-principal);
+  margin-bottom: .3em;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+
+/* Etiquetas bajo la cadena (oferta / demanda) */
+.tramo {
+  display: flex;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--color-suave);
+  text-align: center;
+}
+.tramo div {
+  border-top: 2px solid var(--color-borde-caja);
+  padding-top: .3em;
+}
+
+/* ---------- 8. Diagrama de asignación aleatoria ---------- */
+.poblacion {
+  display: block;
+  background-color: var(--color-fondo-caja);
+  border: 1px solid var(--color-borde-caja);
+  border-radius: 4px;
+  padding: .6em;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-principal);
+  width: 60%;
+  margin: 0 auto .8em auto;
+}
+.flechas {
+  display: block;
+  text-align: center;
+  color: var(--color-suave);
+  font-size: 15px;
+  margin-bottom: .5em;
+}
+.grupo-caja {
+  display: block;
+  border-radius: 4px;
+  padding: .6em;
+  text-align: center;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.grupo-trat { background-color: var(--color-acento); }
+.grupo-comp { background-color: var(--color-secundario); }
+
+/* ---------- 9. Tablas ---------- */
+.remark-slide-content table {
+  font-size: 19px;
+  border-collapse: collapse;
+  margin: .8em auto;
+}
+.remark-slide-content th {
+  background-color: var(--color-principal);
+  color: #FFFFFF;
+  padding: .45em .8em;
+}
+.remark-slide-content td {
+  padding: .4em .8em;
+  border-bottom: 1px solid var(--color-borde-caja);
+}
+
+/* ---------- 10. Fórmulas ---------- */
+.formula {
+  text-align: center;
+  font-size: 30px;
+  margin: 1em 0;
+  color: var(--color-principal);
+}
+
+/* ---------- 11. Imágenes ---------- */
+.remark-slide-content img { max-width: 100%; }
+.img-centro { display: block; margin: 0 auto; }
+
+/* ---------- 12. Numeración de diapositivas ---------- */
+.remark-slide-number {
+  font-size: 13px;
+  color: var(--color-suave);
+  opacity: .8;
+}
