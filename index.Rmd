@@ -73,31 +73,29 @@ La evaluación de impacto (ya está la clase subida al campus de posgrado)
 
 - Evaluación de impacto del programa Tarjeta Alimentar, [aca](https://drive.google.com/file/d/1dp55IB3rzw93ZDqMPlMkPEkQ1WKZYNAi/view?usp=sharing) 
 
+<!--
 ### Clase 4. 6 de Agosto. Performance Stats
-
 - Robert Behn, [The PerformanceStat Potential](https://drive.google.com/file/d/1ZCK6iXxpFTUZh3X8JFpdhJ1vr4bMytTq/view?usp=sharing), Capítulos 1, 2 y 3.
-
 - Cathy O'Neil, [Weapons of Math Destruction](https://drive.google.com/file/d/10O843_2b8mwYTvTMkqbeOS504tGyaDkG/view?usp=sharing), Capítulo 5.
+-->
 
-
-### Clase 5. 13 de Agosto. Ciencia de Datos — Las funciones básicas
-
+### Clase 4. 6 de Agosto. Ciencia de Datos — Las funciones básicas
 - Vazquez Brust y Zayat, *Ciencia de Datos para el Activismo Jurídico*, [https://cdaj.netlify.app/](https://cdaj.netlify.app/), cap. 1, 2, 3 y 4.
 
-### Clase 6. 20 de Agosto. Ciencia de Datos — Introducción a la Estadística
-
+### Clase 5. 13 de Agosto. Ciencia de Datos — Introducción a la Estadística
 - Vazquez Brust y Zayat, *Ciencia de Datos para el Activismo Jurídico*, [https://cdaj.netlify.app/](https://cdaj.netlify.app/), cap. 5 y 7.
 
 - Birger Madsen, [Statistics for non-statisticians](https://drive.google.com/file/d/1g87NNdsQ2DKywKzMYNZlBQZzu6Yuv392/view?usp=sharing), capítulo 3: "Descripción de los datos".
 
-### Clase 7. 27 de Agosto. EPH — Paquete EPH — Brecha de género
+
+### Clase 6. 20 de Agosto. EPH — Paquete EPH — Brecha de género
 
 - Ecofeminita, [La desigualdad de género se puede medir](https://ecofeminita.com/la-desigualdad-de-genero-se-puede-medir/).
 
 - Dirección de Economía, Igualdad y Género, [Las brechas de género en la economía argentina](https://drive.google.com/file/d/1UhrEUJF_S8pYMfW5P44nqr8uIUKEqFg_/view?usp=sharing), 2022.
 
 
-### Clase 8. 3 de Septiembre. Planificando la IFE
+### Clase 7. 27 de Agosto. Planificando la IFE
 
 - [Decreto 310/2020](https://servicios.infoleg.gob.ar/infolegInternet/verNorma.do;jsessionid=F5FE38BBBF923D9755A478A64070400C?id=335820)
 
@@ -105,8 +103,10 @@ La evaluación de impacto (ya está la clase subida al campus de posgrado)
 
 - Dictamen INADI sobre [IFE y Migrantes](https://drive.google.com/file/d/1AxCQuTcREFeDa2fIyPhEdhp1QiNG6mOP/view?usp=sharing).
 
-### Clase 9. Asincrónica — Evaluación de impacto del IFE
+### Clase 8. 3 de Septiembre. Evaluación de impacto del IFE
 
 - Análisis de datos de Covid.
+
+### Clase 9. Asincrónica 
 
 
