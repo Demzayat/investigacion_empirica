@@ -82,6 +82,8 @@ La evaluación de impacto (ya está la clase subida al campus de posgrado)
 ### Clase 4. 6 de Agosto. Ciencia de Datos — Las funciones básicas
 - Vazquez Brust y Zayat, *Ciencia de Datos para el Activismo Jurídico*, [https://cdaj.netlify.app/](https://cdaj.netlify.app/), cap. 1, 2, 3 y 4.
 
+  Datos de mortalidad 2024 en csv en este [link](https://raw.githubusercontent.com/Demzayat/investigacion_empirica/refs/heads/main/mortalidad2024.csv)
+
 ### Clase 5. 13 de Agosto. Ciencia de Datos — Introducción a la Estadística
 - Vazquez Brust y Zayat, *Ciencia de Datos para el Activismo Jurídico*, [https://cdaj.netlify.app/](https://cdaj.netlify.app/), cap. 5 y 7.
 
